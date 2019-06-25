@@ -1,0 +1,30 @@
+.demo {
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+  }
+
+  button {
+    margin: 0 auto 20px;
+    padding: 8px 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  // position must be relative
+  // width & height can be whatever you want
+  .image-swiper {
+    position: relative;
+    max-width: 600px;
+    height: 600px;
+    height: 474px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,7 @@
+<div class="demo">
+  <h1>NGX Image Swiper</h1>
+  <button (click)="nav()">{{ swiperConfig.navigation ? 'Disable Nav' : 'Enable Nav' }}</button>
+  <div class="image-swiper">
+    <ngx-image-swiper [config]="swiperConfig" [images]="images" (imageClick)="imgClicked($event)"></ngx-image-swiper>
+  </div>
+</div>

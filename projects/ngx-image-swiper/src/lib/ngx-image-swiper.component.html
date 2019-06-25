@@ -1,0 +1,43 @@
+<div class="ngx-image-swiper">
+  <!-- navigation -->
+  <ng-container *ngIf="swiperConfig.navigation">
+    <div class="navigation navigation--left navigation--{{ swiperConfig.navigationPlacement }}"
+      [ngStyle]="{'top': swiperConfig.pagination && swiperConfig.paginationPlacement === 'outside' ? 'calc(50% - 50px)' : '50%'}">
+      <button class="navigation__button navigation__button--left"
+        (click)="goToImage({ direction: 'previous', mouseUpX: null })"
+        [ngStyle]="{ 'background-image': 'url(' + swiperConfig.navigationLeftIcon + ')' }"
+        [disabled]="!swiperConfig.loop && this.currentIndex === 0">
+      </button>
+    </div>
+    <div class="navigation navigation--right navigation--{{ swiperConfig.navigationPlacement }}"
+      [ngStyle]="{'top': swiperConfig.pagination && swiperConfig.paginationPlacement === 'outside' ? 'calc(50% - 50px)' : '50%'}">
+      <button class="navigation__button navigation__button--right"
+        (click)="goToImage({ direction: 'next', mouseUpX: null })"
+        [ngStyle]="{ 'background-image': 'url(' + swiperConfig.navigationRightIcon + ')' }"
+        [disabled]="!swiperConfig.loop && this.currentIndex === images.length - 1">
+      </button>
+    </div>
+  </ng-container>
+
+  <!-- images -->
+  <div class="swipe-container"
+    [ngStyle]="{ 'border-width': swiperConfig.border ? '1px' : '0', 'border-radius': swiperConfig.borderRadius ? swiperConfig.borderRadius + 'px' : '0', 'width': swiperConfig.navigation && swiperConfig.navigationPlacement === 'outside' ? 'calc(100% - 112px)' : '', 'margin': swiperConfig.navigation && swiperConfig.navigationPlacement === 'outside' ? '0 auto' : '' }">
+    <div #imageSwiper class="images-container smooth" ngxImageSwiper (goToImage)="goToImage($event)"
+      (mouseDrag)="mouseDrag($event)">
+      <div class="image" *ngFor="let image of images; let i = index"
+        [ngStyle]="{'background-image': 'url(' + image + ')', 'background-size': swiperConfig.imgBackgroundSize, 'border-radius': swiperConfig.borderRadius ? swiperConfig.borderRadius + 'px' : '0' }"
+        (click)="imageClicked(i)">
+        <!-- img still here to force the div size -->
+        <img [src]="image">
+      </div>
+    </div>
+  </div>
+
+  <!-- pagination -->
+  <div #pagination *ngIf="swiperConfig.pagination" class="pagination"
+    [ngClass]="{'pagination--inside': swiperConfig.paginationPlacement === 'inside'}"
+    [ngStyle]="{ 'left': swiperConfig.paginationPlacement === 'inside' ? 'calc(50% - ' + paginationWidth / 2 + 'px)' : '' }">
+    <button *ngFor="let image of images; let i = index" class="pagination__dot"
+      [ngClass]="{'pagination__dot--active': currentIndex === i}" (click)="goToImageIndex(i)"></button>
+  </div>
+</div>
