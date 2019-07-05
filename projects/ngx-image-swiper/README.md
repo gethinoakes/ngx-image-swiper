@@ -4,7 +4,7 @@
 
 A relatively simple component for displaying images in a container that can be navigated by mouse, touch and keyboard events with no dependencies, other than Angular of course.
 
-[Stackblitz Demo](https://stackblitz.com/github/gethinoakes/ngx-image-swiper)
+[Stackblitz Demo](https://stackblitz.com/edit/ngx-image-swiper-demo)
 
 ## Installation
 
@@ -15,11 +15,11 @@ A relatively simple component for displaying images in a container that can be n
 Import `NgImageSwiperModule` into the required module:
 
 ```typescript
-import { NgxMasonryModule } from 'ngx-masonry';
+import { NgImageSwiperModule } from 'ngx-image-swiper';
 
 @NgModule({
   imports: [
-    NgxMasonryModule
+    NgImageSwiperModule
   ]
 })
 ```
