@@ -15,11 +15,11 @@ A relatively simple component for displaying images in a container that can be n
 Import `NgImageSwiperModule` into the required module:
 
 ```typescript
-import { NgxMasonryModule } from 'ngx-masonry';
+import { NgImageSwiperModule } from 'ngx-image-swiper';
 
 @NgModule({
   imports: [
-    NgxMasonryModule
+    NgImageSwiperModule
   ]
 })
 ```
