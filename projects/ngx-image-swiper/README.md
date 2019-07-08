@@ -100,7 +100,7 @@ keyboardNavigation?: boolean;
 
 `navigation`
 
-Enable/disable left/right button navigation
+Enable/disable left/right button navigation (will only show there is more than 1 image).
 
 - default: `true`
 
@@ -123,7 +123,7 @@ Overwrite the icons used for the background image of the left/right navigation b
 
 `pagination`
 
-Enable/disable the pagination dots
+Enable/disable the pagination dots (will only show there is more than 1 image).
 
 - default: `'true'`
 
