@@ -2,7 +2,7 @@
   <!-- navigation -->
   <ng-container *ngIf="swiperConfig.navigation && images.length > 1">
     <div class="navigation navigation--left navigation--{{ swiperConfig.navigationPlacement }}"
-      [ngStyle]="{'top': swiperConfig.pagination && swiperConfig.paginationPlacement === 'outside' ? 'calc(50% - 50px)' : '50%'}">
+      [ngStyle]="{'top': swiperConfig.pagination && swiperConfig.paginationPlacement === 'outside' ? 'calc(50% - 29px)' : '50%'}">
       <button class="navigation__button navigation__button--left"
         (click)="goToImage({ direction: 'previous', mouseUpX: null })"
         [ngStyle]="{ 'background-image': 'url(' + swiperConfig.navigationLeftIcon + ')' }"
@@ -10,7 +10,7 @@
       </button>
     </div>
     <div class="navigation navigation--right navigation--{{ swiperConfig.navigationPlacement }}"
-      [ngStyle]="{'top': swiperConfig.pagination && swiperConfig.paginationPlacement === 'outside' ? 'calc(50% - 50px)' : '50%'}">
+      [ngStyle]="{'top': swiperConfig.pagination && swiperConfig.paginationPlacement === 'outside' ? 'calc(50% - 29px)' : '50%'}">
       <button class="navigation__button navigation__button--right"
         (click)="goToImage({ direction: 'next', mouseUpX: null })"
         [ngStyle]="{ 'background-image': 'url(' + swiperConfig.navigationRightIcon + ')' }"
