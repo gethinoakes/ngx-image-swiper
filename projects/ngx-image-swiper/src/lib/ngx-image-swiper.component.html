@@ -35,8 +35,7 @@
 
   <!-- pagination -->
   <div #pagination *ngIf="swiperConfig.pagination && images.length > 1" class="pagination"
-    [ngClass]="{'pagination--inside': swiperConfig.paginationPlacement === 'inside'}"
-    [ngStyle]="{ 'left': swiperConfig.paginationPlacement === 'inside' ? 'calc(50% - ' + paginationWidth / 2 + 'px)' : '' }">
+    [ngClass]="{'pagination--inside': swiperConfig.paginationPlacement === 'inside'}">
     <button *ngFor="let image of images; let i = index" class="pagination__dot"
       [ngClass]="{'pagination__dot--active': currentIndex === i}" (click)="goToImageIndex(i)"></button>
   </div>
