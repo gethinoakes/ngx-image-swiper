@@ -62,7 +62,10 @@
       cursor: pointer;
       padding: 0;
       width: 40px;
+      min-width: auto;
       height: 40px;
+      min-height: auto;
+      margin: 0;
 
       img {
         position: absolute;
@@ -118,9 +121,9 @@
       cursor: pointer;
       padding: 0;
       width: 10px;
-      min-width: 10px;
+      min-width: auto;
       height: 10px;
-      min-height: 10px;
+      min-height: auto;
 
       &--active {
         background-color: #333;
