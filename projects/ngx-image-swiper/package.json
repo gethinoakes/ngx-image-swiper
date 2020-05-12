@@ -1,6 +1,6 @@
 {
   "name": "ngx-image-swiper",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "A relatively simple component for displaying images in a container that can be navigated by mouse, touch and keyboard with no dependencies, other than Angular of course.",
   "keywords": [
     "angular",
@@ -21,7 +21,7 @@
     "url": "https://github.com/gethinoakes/ngx-image-swiper/"
   },
   "peerDependencies": {
-    "@angular/common": "^6.0.0",
-    "@angular/core": "^6.0.0"
+    "@angular/common": ">=8.0.0 <10.0.0",
+    "@angular/core": ">=8.0.0 <10.0.0"
   }
 }
