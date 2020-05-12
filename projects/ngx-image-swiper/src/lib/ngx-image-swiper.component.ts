@@ -23,8 +23,8 @@ import { MouseDrag } from './extras/MouseDrag';
 })
 export class NgxImageSwiperComponent implements DoCheck, AfterViewInit {
   /*-- swiper properties --*/
-  @ViewChild('imageSwiper', null) imageSwiper: ElementRef;
-  @ViewChild('pagination', null) pagination: ElementRef;
+  @ViewChild('imageSwiper', { static: false }) imageSwiper: ElementRef;
+  @ViewChild('pagination', { static: false }) pagination: ElementRef;
   @Input() images: [string];
   swiperConfig: NgxSwiperConfig = {
     navigation: true,
@@ -166,12 +166,13 @@ export class NgxImageSwiperComponent implements DoCheck, AfterViewInit {
   and the imageSwiperWidth so we know which image to show
   ====================*/
   setTranslateX() {
-    this.imageSwiper.nativeElement.style.transform = `translate3d(${this.currentIndex *
-      -this.imageSwiperWidth}px, 0, 0)`;
+    this.imageSwiper.nativeElement.style.transform = `translate3d(${
+      this.currentIndex * -this.imageSwiperWidth
+    }px, 0, 0)`;
   }
 
   /*====================
-  mainly for UX purposes we show "drag" the image when the user is dragging
+  mainly for UX purposes we show 'drag' the image when the user is dragging
   their cursor/finger over the image to show which way they will swipe
   and also to show the prev/next image
   ====================*/
