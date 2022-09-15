@@ -20,6 +20,9 @@
     "type": "git",
     "url": "https://github.com/gethinoakes/ngx-image-swiper/"
   },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
     "@angular/common": ">=8.0.0 <10.0.0",
     "@angular/core": ">=8.0.0 <10.0.0"
