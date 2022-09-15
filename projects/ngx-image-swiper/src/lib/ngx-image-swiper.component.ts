@@ -25,7 +25,7 @@ export class NgxImageSwiperComponent implements DoCheck, AfterViewInit {
   /*-- swiper properties --*/
   @ViewChild('imageSwiper') imageSwiper: ElementRef;
   @ViewChild('pagination') pagination: ElementRef;
-  @Input() images: [string];
+  @Input() images: string[];
   swiperConfig: NgxSwiperConfig = {
     navigation: true,
     navigationPlacement: 'outside',
