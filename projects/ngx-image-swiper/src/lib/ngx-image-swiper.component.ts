@@ -1,20 +1,20 @@
 import {
+  AfterViewInit,
   Component,
   DoCheck,
-  KeyValueDiffers,
-  KeyValueDiffer,
-  AfterViewInit,
-  ViewChild,
   ElementRef,
-  Input,
+  EventEmitter,
   HostListener,
+  Input,
+  KeyValueDiffer,
+  KeyValueDiffers,
   Output,
-  EventEmitter
+  ViewChild
 } from '@angular/core';
 
-import { NgxSwiperConfig } from './extras/NgxSwiperConfig';
-import { NavigationIcons } from './extras/NavigationIcons';
 import { MouseDrag } from './extras/MouseDrag';
+import { NavigationIcons } from './extras/NavigationIcons';
+import { NgxSwiperConfig } from './extras/NgxSwiperConfig';
 
 @Component({
   selector: 'ngx-image-swiper',
