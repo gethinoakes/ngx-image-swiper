@@ -23,8 +23,8 @@ import { MouseDrag } from './extras/MouseDrag';
 })
 export class NgxImageSwiperComponent implements DoCheck, AfterViewInit {
   /*-- swiper properties --*/
-  @ViewChild('imageSwiper', { static: false }) imageSwiper: ElementRef;
-  @ViewChild('pagination', { static: false }) pagination: ElementRef;
+  @ViewChild('imageSwiper') imageSwiper: ElementRef;
+  @ViewChild('pagination') pagination: ElementRef;
   @Input() images: [string];
   swiperConfig: NgxSwiperConfig = {
     navigation: true,
