@@ -1,20 +1,20 @@
 import {
+  AfterViewInit,
   Component,
   DoCheck,
-  KeyValueDiffers,
-  KeyValueDiffer,
-  AfterViewInit,
-  ViewChild,
   ElementRef,
-  Input,
+  EventEmitter,
   HostListener,
+  Input,
+  KeyValueDiffer,
+  KeyValueDiffers,
   Output,
-  EventEmitter
+  ViewChild
 } from '@angular/core';
 
-import { NgxSwiperConfig } from './extras/NgxSwiperConfig';
-import { NavigationIcons } from './extras/NavigationIcons';
 import { MouseDrag } from './extras/MouseDrag';
+import { NavigationIcons } from './extras/NavigationIcons';
+import { NgxSwiperConfig } from './extras/NgxSwiperConfig';
 
 @Component({
   selector: 'ngx-image-swiper',
@@ -23,9 +23,9 @@ import { MouseDrag } from './extras/MouseDrag';
 })
 export class NgxImageSwiperComponent implements DoCheck, AfterViewInit {
   /*-- swiper properties --*/
-  @ViewChild('imageSwiper', { static: false }) imageSwiper: ElementRef;
-  @ViewChild('pagination', { static: false }) pagination: ElementRef;
-  @Input() images: [string];
+  @ViewChild('imageSwiper') imageSwiper: ElementRef;
+  @ViewChild('pagination') pagination: ElementRef;
+  @Input() images: string[];
   swiperConfig: NgxSwiperConfig = {
     navigation: true,
     navigationPlacement: 'outside',
