@@ -1,3 +1,5 @@
+**NO LONGER MAINTAINED**
+
 # NgxImageSwiper
 
 [![npm version](https://badge.fury.io/js/ngx-image-swiper.svg)](https://www.npmjs.com/package/ngx-image-swiper)
